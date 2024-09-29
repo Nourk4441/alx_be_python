@@ -6,9 +6,10 @@ def perform_operation(num1, num2, operation):
     elif operation=="multiply":
         result=num1*num2
     elif operation=="divide":
-        result=num1/num2
-    elif num2==0 and operation=="divide":
-        result="Can not divide by zero" 
+        if num2 == 0:
+            result="Can not divide by zero"
+        else: 
+          result=num1/num2
     return result          
                    
 
